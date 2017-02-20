@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def analysis_list(request):
+    return render(request, 'createnetwork/analysis_list.html', {})
