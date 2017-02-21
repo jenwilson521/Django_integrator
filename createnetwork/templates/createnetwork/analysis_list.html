@@ -2,17 +2,26 @@
     <head>
        <title>Jen's Integrator Tool</title>
     </head>
-    <body>
-	
 
+    <body>
         <div>
-            <h1><a href="">About Integrator Tool</a></h2>
+            <h1><a href="">About Integrator Tool</a></h1>
             <p> Welcome! This is a new tool that I'm developing to build predictive biomarker models for identifying drug-drug interactions, off-target effects, and genetic predictors of drug efficacy </p>
         </div>
  
-        <div>
-            <h1><a href="">SETDB1 example</a></h2>
-            <p> This analysis was for a published SGC TEP</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p> published: {{post.published_date}}</p>
+                <h1><a href=""{{post.title}}</a></h1>
+                <p>{{post.text|linebreaksbr}}</p>
+            </div>
+        {% endfor %}
+
     </body>
 </html>
+
+
+#        <div>
+#            <h1><a href="">SETDB1 example</a></h1>
+#            <p> This analysis was for a published SGC TEP</p>
+#        </div>
