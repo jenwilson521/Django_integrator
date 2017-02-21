@@ -9,11 +9,11 @@
             <p> Welcome! This is a new tool that I'm developing to build predictive biomarker models for identifying drug-drug interactions, off-target effects, and genetic predictors of drug efficacy </p>
         </div>
  
-        {% for post in posts %}
+        {% for netan in netans %}
             <div>
-                <p> published: {{post.published_date}}</p>
-                <h1><a href=""{{post.title}}</a></h1>
-                <p>{{post.text|linebreaksbr}}</p>
+                <p> published: {{netan.published_date}}</p>
+                <h1><a href=""{{netan.title}}</a></h1>
+                <p>{{netan.text|linebreaksbr}}</p>
             </div>
         {% endfor %}
 
