@@ -2,27 +2,19 @@
     <head>
        <title>Jen's Integrator Tool</title>
     </head>
-
     <body>
         <div>
-            {{netans}}
-            <h1><a href="">About Integrator Tool</a></h1>
-            <p> Welcome! This is a new tool that I'm developing to build predictive biomarker models for identifying drug-drug interactions, off-target effects, and genetic predictors of drug efficacy </p>
+           <h1><a href="/">About Integrator Tool</a></h1> 
         </div>
- 
-        {% for netan in netans %}
+
+        {% for nta in netans %}
             <div>
-                <p> published: {{netan.published_date}}</p>
-                <h1><a href=""{{netan.title}}</a></h1>
-                <p>{{netan.text|linebreaksbr}}</p>
+                <p>published: {{nta.published_date}} </p>
+                <h1><a href="">{{nta.title}}</a></h1>
+                <p><a href="">{{nta.gene_text}}</a></h1>
+                <p>{{nta.text|linebreaksbr}}</p>
             </div>
         {% endfor %}
-
     </body>
 </html>
 
-
-<!--        <div> -->
-<!--            <h1><a href="">SETDB1 example</a></h1> -->
-<!--            <p> This analysis was for a published SGC TEP</p> -->
-<!--        </div> -->
