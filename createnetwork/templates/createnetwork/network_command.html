@@ -1,0 +1,50 @@
+{% block content %}
+<form action="/makecommand/" method="post">{% csrf_token %}
+    <!-- *author -->
+    {{  form.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ form.author.errors }}
+        <label for="id_author">Author</label>
+        {{ form.author }}
+    </div>
+    <!-- *email -->
+    <div class="fieldWrapper">
+        {{ form.email.errors }}
+        <label for="id_email">Email</label>
+        {{ form.email }}
+    </div>
+    <!-- analysis_title -->
+    <div class="fieldWrapper">
+        {{ form.analysis_title.errors }}
+        <label for="id_analysis_title">Analysis_Name</label>
+        {{ form.analysis_title }}
+    </div>
+    <!-- location -->
+    <div class="fieldWrapper">
+        {{ form.location.errors }}
+        <label for="id_name">Location</label>
+        {{ form.location }}
+    </div>
+    <!-- analysis_description -->
+    <div class="fieldWrapper">
+        {{ form.analysis_description.errors }}
+        <label for="id_analysis_description">Description</label>
+        {{ form.analysis_description }}
+    </div>
+    <!-- gene_target -->
+    <div class="fieldWrapper">
+        {{ form.gene_target.errors }}
+        <label for="id_gene_target">Gene_Target</label>
+        {{ form.gene_target }}
+    </div>
+    <!-- eQTL -->
+    <div class="fieldWrapper">
+        {{ form.eQTL.errors }}
+        <label for="id_eQTL">eQTL_included</label>
+        {{ form.eQTL }}
+    </div>
+    <button type="submit">
+        <i class="fa fa-thumb-tack"></i> Post
+    </button>
+</form>
+{% endblock %}
